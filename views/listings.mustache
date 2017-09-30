@@ -11,6 +11,16 @@
       <h1>craigslist</h1>
       <h3>raleigh apts/housing for rent</h3>
     </nav>
-
+    {{#items}}
+    <div class = "item-wrapper">
+      <table>
+        <tr>
+          <td class = "item-title">{{title}}</td>
+          <td class = "item-price">${{price}}</td>
+          <td class = "item-date">{{date}}, 2017</td>
+        </tr>
+      </table>
+    </div>
+    {{/items}}
   </body>
 </html>
