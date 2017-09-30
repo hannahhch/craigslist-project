@@ -3,8 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Craiglist</title>
+    <link rel="stylesheet" type="text/css" href="./public/styles.css">
+
   </head>
   <body>
-
+    {{#items}}
+    <div class = "item-wrapper">
+      {{title}}
+      {{price}}
+      {{date}}
+    </div>
+    {{/items}}
   </body>
 </html>
