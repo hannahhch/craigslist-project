@@ -1,6 +1,5 @@
 const scrapeIt = require("scrape-it");
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize('sqlite://test.db');
+const sequelize = require('./connection.js');
 const Item = require('./models/item.js');
 
 
@@ -34,7 +33,10 @@ for (let i = 0; i < urls.length; i ++){
 
     sequelize.sync()
     .then(() => Promise.all(
-      items.map(item => Item.create(item))
+      items.map(item => {
+        item.price = item.price.slice(1);
+        return Item.create(item)
+      })
     ))
   });
 }

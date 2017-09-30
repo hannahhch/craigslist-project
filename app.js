@@ -11,7 +11,7 @@ app.set('views', './views');
 app.use('/public', express.static('public'));
 
 app.get('/', function(req,res){
-  Item.findAll().then(items =>{
+  Item.findAll({order: ["price"]}).then(items =>{
     res.render("index", {items:items});
 
   })

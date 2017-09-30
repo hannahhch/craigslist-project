@@ -1,10 +1,10 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('sqlite://test.db');
+const sequelize = require('../connection.js');
 
 
 const Item = sequelize.define('item', {
   title: Sequelize.STRING,
-  price: Sequelize.STRING,
+  price: Sequelize.INTEGER,
   date: Sequelize.STRING,
 });
 

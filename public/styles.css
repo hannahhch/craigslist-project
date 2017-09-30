@@ -1,3 +1,18 @@
-.item-wrapper{
-  border: solid 1px black;
+body{
+  margin: 0;
+}
+
+table{
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.item-title{
+  width: 60%;
+  text-align: center;
+}
+
+.item-price, .item-date{
+  width: 20%;
+  text-align: center;
 }
