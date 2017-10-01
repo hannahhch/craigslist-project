@@ -1,48 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>craigslist</title>
-    <link rel="stylesheet" type="text/css" href="./public/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
-  </head>
-  <body>
-    <nav class = "nav">
+<head>
+  <meta charset="utf-8">
+  <title>craigslist</title>
+  <link rel="stylesheet" type="text/css" href="./public/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+  <link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./public/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class = "nav">
+    <div class = "nav-title">
       <h1>craigslist</h1>
-        <div>
-          <h3>apts/housing for rent</h3>
-        </div>
-    </nav>
-    <div class = "item-wrapper">
-      <div class = 'price-header'>
-        <div><h4>0 - $200</h4></div>
-        <div><h4>There are {{two.length}} items in this price range.</h4></div>
+      <p>raleigh</p>
+    </div>
+    <div class = "nav-right">
+      <h3>apts/housing for rent</h3>
+    </div>
+  </nav>
+  <div class = "item-wrapper">
+    <div class = 'price-header-main'>
+      <div><h3>0 - $200</h3></div>
+      <div><h4>There are {{one.length}} items in this price range.</h4></div>
+    </div>
+    {{#one}}
+    <table>
+      <tr>
+        <td class = "item-title">{{title}}</td>
+        <td class = "item-price">${{price}}</td>
+        <td class = "item-date">{{date}}, 2017</td>
+      </tr>
+    </table>
+    {{/one}}
+  </div>
+  <div class = "item-wrapper">
+    <div class = 'price-header'>
+      <div><h3>$201 - $400</h3></div>
+      <div><h4>There are {{two.length}} items in this price range.</h4></div>
     </div>
     {{#two}}
-      <table>
-        <tr>
-          <td class = "item-title">{{title}}</td>
-          <td class = "item-price">${{price}}</td>
-          <td class = "item-date">{{date}}, 2017</td>
-        </tr>
-      </table>
+    <table>
+      <tr>
+        <td class = "item-title">{{title}}</td>
+        <td class = "item-price">${{price}}</td>
+        <td class = "item-date">{{date}}, 2017</td>
+      </tr>
+    </table>
     {{/two}}
-</div>
-<div class = "item-wrapper">
-  <div class = 'price-header'>
-    <div><h4>$201 - $300</h4></div>
-    <div><h4>There are {{three.length}} items in this price range.</h4></div>
-</div>
-{{#three}}
-  <table>
-    <tr>
-      <td class = "item-title">{{title}}</td>
-      <td class = "item-price">${{price}}</td>
-      <td class = "item-date">{{date}}, 2017</td>
-    </tr>
-  </table>
-{{/three}}
-</div>
-
-  </body>
+  </div>
+  <div class = "item-wrapper">
+    <div class = 'price-header'>
+      <div><h3>$401 - $600</h3></div>
+      <div><h4>There are {{three.length}} items in this price range.</h4></div>
+    </div>
+    {{#three}}
+    <table>
+      <tr>
+        <td class = "item-title">{{title}}</td>
+        <td class = "item-price">${{price}}</td>
+        <td class = "item-date">{{date}}, 2017</td>
+      </tr>
+    </table>
+    {{/three}}
+  </div>
+  <div class = "item-wrapper">
+    <div class = 'price-header'>
+      <div><h3>$601 - $800</h3></div>
+      <div><h4>There are {{four.length}} items in this price range.</h4></div>
+    </div>
+    {{#four}}
+    <table>
+      <tr>
+        <td class = "item-title">{{title}}</td>
+        <td class = "item-price">${{price}}</td>
+        <td class = "item-date">{{date}}, 2017</td>
+      </tr>
+    </table>
+    {{/four}}
+  </div>
+  <div class = "item-wrapper">
+    <div class = 'price-header'>
+      <div><h3>$801 - $1000</h3></div>
+      <div><h4>There are {{five.length}} items in this price range.</h4></div>
+    </div>
+    {{#five}}
+    <table>
+      <tr>
+        <td class = "item-title">{{title}}</td>
+        <td class = "item-price">${{price}}</td>
+        <td class = "item-date">{{date}}, 2017</td>
+      </tr>
+    </table>
+    {{/five}}
+  </div>
+</body>
 </html>
