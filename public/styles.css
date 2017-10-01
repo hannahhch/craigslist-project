@@ -1,18 +1,99 @@
 body{
   margin: 0;
+  background-color: #EEEEEE;
 }
 
-table{
-  width: 60vw;
+h3{
+  color: #60175B;
+}
+
+h4{
+  text-align: left;
+}
+
+/* navigation bar */
+
+.nav{
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid .5px lightgrey;
+  margin-bottom: 60px;
+  font-family: 'Merriweather', serif;
+}
+
+.nav h1, .nav-title p{
+  margin: 0;
+}
+
+.nav-title{
+  padding-left: 15px;
+}
+
+.nav-right{
+  padding-right: 15px;
+}
+
+.nav a{
+  padding-right: 10px;
+  color: #60175B;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav a:hover{
+  text-decoration: underline;
+}
+
+/* price and header (amount of items at price point) */
+
+.price-header{
+  width: 75vw;
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+  margin-top: 100px;
+  border-top: solid .5px lightgrey;
+}
+
+.price-header-main{
+  width: 75vw;
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+}
+
+/* table */
+
+.item-wrapper{
   margin: 0 auto;
+  width: 75vw;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }
 
 .item-title{
-  width: 60%;
-  text-align: center;
+  width: 70%;
+  text-align: left;
+  border-right: solid .5px lightgrey;
 }
 
-.item-price, .item-date{
+table{
+  width: 75vw;
+  margin: 0 auto;
+  padding: 10px;
+  border: solid .5px lightgrey;
+  background-color: white;
+}
+
+.item-date{
   width: 20%;
-  text-align: center;
+}
+
+.item-price{
+  width: 10%;
+  border-right: solid .5px lightgrey;
 }
